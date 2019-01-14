@@ -1,4 +1,6 @@
 
+**Passwords and encryption are excluded. Only fingerprint authentication is used by coolsofwarelab**
+
 Android FingerprintDialog Sample
 ===================================
 
