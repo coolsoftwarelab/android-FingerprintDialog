@@ -41,7 +41,7 @@ public class FingerprintUiHelper extends FingerprintManager.AuthenticationCallba
      * Constructor for {@link FingerprintUiHelper}.
      */
     FingerprintUiHelper(FingerprintManager fingerprintManager,
-            ImageView icon, TextView errorTextView, Callback callback) {
+                        ImageView icon, TextView errorTextView, Callback callback) {
         mFingerprintManager = fingerprintManager;
         mIcon = icon;
         mErrorTextView = errorTextView;
@@ -55,7 +55,7 @@ public class FingerprintUiHelper extends FingerprintManager.AuthenticationCallba
                 && mFingerprintManager.hasEnrolledFingerprints();
     }
 
-    public void startListening(FingerprintManager.CryptoObject cryptoObject) {
+    public void startListening() {
         if (!isFingerprintAuthAvailable()) {
             return;
         }
@@ -64,7 +64,7 @@ public class FingerprintUiHelper extends FingerprintManager.AuthenticationCallba
         // The line below prevents the false positive inspection from Android Studio
         // noinspection ResourceType
         mFingerprintManager
-                .authenticate(cryptoObject, mCancellationSignal, 0 /* flags */, this, null);
+                .authenticate(null, mCancellationSignal, 0 /* flags */, this, null);
         mIcon.setImageResource(R.drawable.ic_fp_40px);
     }
 

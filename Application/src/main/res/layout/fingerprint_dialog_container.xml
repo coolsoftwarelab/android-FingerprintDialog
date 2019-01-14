@@ -25,10 +25,6 @@
 
         <include layout="@layout/fingerprint_dialog_content" />
 
-        <include
-            layout="@layout/fingerprint_dialog_backup"
-            android:visibility="gone" />
-
     </FrameLayout>
 
     <LinearLayout
@@ -55,11 +51,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
-        <Button
-            android:id="@+id/second_dialog_button"
-            style="?android:attr/buttonBarPositiveButtonStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
     </LinearLayout>
 
 </LinearLayout>
